@@ -18,16 +18,26 @@ function playRound(player){
         else if((player == 'rock' && computer=='paper') || (player == 'scissors' && computer=='rock') || (player == 'paper' && computer=='scissors')){
             mostRecentResult.textContent = `It looks like you lose! The computer chose ${computer}.`;
             computerScore++;
+            if (computerScore ==5){
+                const body = document.querySelector("body");
+                const finalResult = document.createElement("div");
+                finalResult.textContent = "The computer won the first to 5! You are no match for the computer!";
+                body.appendChild(finalResult);
+            }
+
         }
         else if((computer == 'rock' && player=='paper') || (computer == 'scissors' && player=='rock') || (computer == 'paper' && player=='scissors')){
             mostRecentResult.textContent = `You Win! The computer chose ${computer} and you have come out victorious!`;
             playerScore ++;
+            if (playerScore == 5){
+                const body = document.querySelector("body");
+                const finalResult = document.createElement("div");
+                finalResult.textContent ="You've won the first to 5! You've bested the computer!";
+                body.appendChild(finalResult);
+            }
         }
         scoreboard.textContent = `Player:${playerScore} Computer:${computerScore}`
-        if (playerScore == 5)
-            mostRecentResult.textContent += "\n   You've won the first to 5! You've bested the computer!"
-        else if (computerScore ==5)
-            mostRecentResult.textContent += "\n   The computer won the first to 5! You are no match for the computer!"
+        
         return;
     }
 

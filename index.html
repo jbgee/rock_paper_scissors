@@ -3,13 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <title> Rock Paper Scissors! </title>
+        <link rel="stylesheet" href="styles.css"> 
     </head>
     <body>
-        <button id="rock"> ROCK </button>
-        <button id="paper"> PAPER </button>
-        <button id="scissors"> SCISSORS </button>
-        <div id="scoreboard"> Player:0  Computer:0</div>
-        <div id="mostRecentResult"> </div>
+        <div id="titleBlock"> Rock Paper Scissors</div>
+        <div id="mostRecentResult"> Choose your weapon to start!</div>
+        <div id="inputContainer">
+            <div class="inputCard" id="rock">
+                <img src="images/rock.jpg" alt="a clipart image of a rock" class="squareImage">
+                <button class="playerButton"> ROCK </button>
+            </div>
+
+            <div class="inputCard" id="paper">
+                <img src="images/paper.jpg" alt="a clipart image of a paper" class="squareImage">
+                <button class="playerButton"> PAPER </button>
+            </div>
+
+            <div class="inputCard" id="scissors">
+                <img src="images/scissors.jpg" alt="a clipart image of a pair of scissors" class="squareImage">
+                <button class="playerButton"> SCISSORS </button>
+            </div>
+        </div>
+        <div id="scoreboard"> 
+            <span id="playerScore">Player:0 </span>
+            <span id="computerScore">Computer:0 </span>
+        </div>
         <script src="rps.js"></script>
     </body>
 </html>
